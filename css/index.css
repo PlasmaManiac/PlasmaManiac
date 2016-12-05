@@ -11,5 +11,12 @@
 }
 
 body {
-  margin-bottom: 60px
+  margin-bottom: 60px;
+  background: url("https://subtlepatterns.com/patterns/geometry.png");
+}
+
+#main {
+  background-color: RGBA(241,241,241,0.75);
+  border: 2px solid #ebebeb;
+  padding: 10px 30px 10px 30px
 }
