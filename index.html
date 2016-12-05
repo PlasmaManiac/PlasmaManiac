@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>The Google Un-Translator</h1>
+                <p class="lead">Input a phrase and watch as it is translated to multiple languages and then back to English</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+
+    <!-- /.container -->
+    <div class = "container">
+      <div class = "row">
+
+
+<div clss = "row">
+    <form class = "col-xs-6">
+      <div class="form-group">
+        <label for="input">Input:</label>
+        <textarea class="form-control" rows="5" id="input" autofocus="autofocus" placeholder="Enter the text you want translated"></textarea>
+      </div>
+    </form>
+
+    <form class = "col-xs-6">
+      <div class="form-group">
+        <label for="ouput">Output:</label>
+        <textarea class="form-control" rows="5" id="output" readonly="readonly">
+        </textarea>
+      </div>
+    </form>
+  </div>
+
+<div class = "row">
+     <div class="col-xs-4">
+       <div class="form-group">
+        <label for="sel1">Select amount of translations:</label>
+          <select class="form-control" id="amount_selector">
+            <option>5</option>
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-xs-2" style = "padding-top:25px">
+            <button type = "button" id="submit_button"> Un-translate </button>
+       </div>
+
+     <div class= "col-xs-6">
+        <ol class = "list-group" id = "translations">
+
+        </ol>
+     </div>
+</div>
+    </div>
+   </div>
+
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
