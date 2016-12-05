@@ -48,8 +48,13 @@ function process_response(text, num, source){
       output_field.value = text;
   }
   else{
+    do{
     var lang = Math.round(Math.random() * translate_options.length);
     let target = translate_options[lang];
+    }
+    while(target == source);
+
+    if (target == source)
     translate(process_response,target,source,text, num - 1);
   }
 
