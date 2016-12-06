@@ -20,14 +20,13 @@ let APIKEY = "AIzaSyByxTYA4CmkD1pGXrCdohEwQJu0455WnhQ";
 //$ gcloud auth activate-service-account --key-file=service-account-key-file
 $(button).click(function() {
     let text = input_field.value;
-    //output_field.value = text;
     let translate_amount = amount_selector.value;
     let source = 'el';
     let target = '';
     let lang = Math.round(Math.random() * translate_options.length);
+
     target = translate_options[lang];
     $("#translations").empty();
-    //$("#output_field").empty();
     translate(process_response, target, source, text, translate_amount);
 });
 
@@ -39,6 +38,10 @@ $(input_field).keyup(function(event) {
 });
 
 function process_response(text, num, source) {
+    if(text.length < 1)
+    {
+      return;
+    }
     console.log("num:");
     console.log(num);
     if (num == 1) {
@@ -58,6 +61,10 @@ function process_response(text, num, source) {
 }
 
 function translate(callback, target, source, text, num) {
+    if (text.length < 1)
+    {
+      return;
+    }
     let translated_text;
     text = text.replace(/ /g, '%20') //Replaces all spaces with %20, required for the API call
     let query = url + APIKEY + "&source=" + source + "&target=" + target + "&q=" + text; //Query string containing the info for the API call
