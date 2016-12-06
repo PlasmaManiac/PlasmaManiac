@@ -20,3 +20,7 @@ body {
   border: 2px solid #ebebeb;
   padding: 10px 30px 10px 30px
 }
+
+footer {
+  padding-top: 15px;
+}
