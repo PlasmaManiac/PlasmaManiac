@@ -49,17 +49,12 @@ function process_response(text, num, source){
   }
   else{
     do{
-    var lang = Math.round(Math.random() * translate_options.length);
-    let target = translate_options[lang];
-    }
+      var lang = Math.round(Math.random() * translate_options.length);
+      var target = translate_options[lang];}
     while(target == source);
-
-    if (target == source)
     translate(process_response,target,source,text, num - 1);
   }
-
   let full_pos = translate_options.indexOf(source)
-
   $("#translations").append('<li class = "list-group-item">'+translate_options_full[full_pos]+': '+text+'</li>');
 }
 
